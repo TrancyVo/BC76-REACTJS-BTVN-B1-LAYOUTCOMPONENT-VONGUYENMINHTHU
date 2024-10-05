@@ -49,7 +49,7 @@ const Body = () => {
               {item.icon}
             </div>
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+              <h3 className="text-2xl font-bold mb-2 ">{item.title}</h3>
               <p>{item.paragraph}</p>
             </div>
           </div>
@@ -59,9 +59,11 @@ const Body = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container px-4 lg:p-[50px]">
       <Banner />
-      <div className="grid grid-cols-3 gap-12 mb-12">{renderArrItem()}</div>
+      <div className="grid grid-cols-1 mt-6 lg:grid-cols-2 xl:grid-cols-3 xl:mt-0 gap-12 mb-12">
+        {renderArrItem()}
+      </div>
     </div>
   );
 };
